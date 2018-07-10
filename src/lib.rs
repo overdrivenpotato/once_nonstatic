@@ -91,7 +91,10 @@ impl Once {
         } else {
             *ptr = Some(Inner::new());
 
-            // The closure may take a long time, so we unlock the data.
+            // The closure may take a long time, so we unlock the data. Note
+            // that panics are not accounted for here.
+            //
+            // TODO: Poisoning support.
             self.lock.unlock();
             f();
             self.lock.lock();

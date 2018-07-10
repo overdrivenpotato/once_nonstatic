@@ -2,5 +2,8 @@
 name = "once-nonstatic"
 version = "0.1.0"
 authors = ["Marko Mijalkovic <marko.mijalkovic97@gmail.com>"]
+repository = "https://github.com/overdrivenpotato/once_nonstatic"
+license = "MIT"
+description = "A clone of `std::sync::Once` with relaxed requirements"
 
 [dependencies]
